@@ -20,7 +20,6 @@ export async function getFilesList(req, res) {
   }
 }
 
-
 async function getFiles(req, res) {
   try {
     const response = await fetch(
@@ -38,39 +37,34 @@ async function getFiles(req, res) {
 
 async function getFileData(fileName) {
   try {
-    const response = await fetch(
-      `https://echo-serv.tbxnet.com/v1/secret/file/${fileName}`,
-       fetchOptions
-    );
+
+    const response = await fetch(`https://echo-serv.tbxnet.com/v1/secret/file/${fileName}`, fetchOptions);
     const jsonResponse = await response.text();
+
     const lines = jsonResponse.split("\n");
     const formattedLines = lines.map((row) => row.split(",")).slice(1);
 
     const result = {};
     for (let elem of formattedLines) {
-      if (
-        elem.length === 4 &&
-        !isNaN(elem[2]) &&
-        elem.every((item) => item !== null && item !== "")
-      ) {
-        if (!result[elem[0]]) {
-          result[elem[0]] = [];
+      const [key, text, number, hex] = elem;
+
+      if (key && text && number && hex && !isNaN(number)) {
+        const lineObj = { text, number: parseInt(number), hex };
+
+        if (!result[key]) {
+          result[key] = [];
         }
-        const lineObj = {
-          text: elem[1],
-          number: parseInt([elem[2]]),
-          hex: elem[3],
-        };
-        result[elem[0]].push(lineObj);
+
+        result[key].push(lineObj);
       }
     }
+
     return { file: fileName, lines: result };
   } catch (error) {
     console.error(error);
     throw new Error("An error occurred");
   }
 }
-
 
 
 export async function getData(req, res) {
