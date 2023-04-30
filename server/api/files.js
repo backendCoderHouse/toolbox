@@ -49,18 +49,21 @@ async function getFileData(fileName) {
     for (let elem of formattedLines) {
       if (
         elem.length === 4 &&
-        !isNaN(elem[2]) &&
         elem.every((item) => item !== null && item !== "")
       ) {
-        if (!result[elem[0]]) {
-          result[elem[0]] = [];
+        const numberStr = String(elem[2]).replace(/[^0-9]/g, ''); // convert to string and remove non-numeric characters
+        const number = parseInt(numberStr);
+        if (!isNaN(number)) {
+          if (!result[elem[0]]) {
+            result[elem[0]] = [];
+          }
+          const lineObj = {
+            text: elem[1],
+            number: numberStr,
+            hex: elem[3],
+          };
+          result.push(lineObj);
         }
-        const lineObj = {
-          text: elem[1],
-          number: parseInt([elem[2]]),
-          hex: elem[3],
-        };
-        result.push(lineObj);
       }
     }
     return { file: fileName, lines:result };
@@ -69,6 +72,7 @@ async function getFileData(fileName) {
     throw new Error("An error occurred");
   }
 }
+
 
 export async function getData(req, res) {
   try {
