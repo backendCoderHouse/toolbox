@@ -51,7 +51,7 @@ async function getFileData(fileName) {
         elem.length === 4 &&
         elem.every((item) => item !== null && item !== "")
       ) {
-        const numberStr = String(elem[2]).replace(/[^0-9]/g, ''); // convert to string and remove non-numeric characters
+        const numberStr = String(elem[2]).replace(/[^0-9]/g, ''); 
         const number = parseInt(numberStr);
         if (!isNaN(number)) {
           if (!result[elem[0]]) {
