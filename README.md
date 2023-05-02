@@ -10,6 +10,8 @@
 
 <p>Para ejecutar esta aplicación, puede optar por utilizar Docker o correrlo directamente en su equipo.</p>
 
+<small>Nota: Para correr la aplicación sin docker, consulte la documentación a continuación del Backend y del frontend respecto de sus requisitos previos. </small>
+
 <h2>1 - Método Docker</h2>
 
 <p>Requisitos técnicos :</p>
@@ -69,7 +71,7 @@
 <p>Nota : deberá contar con la versión 16 de Node js, dado que es uno de los requerimientos del challenge, que funcione bajo una versión específica de Node</p>
 <p>Esto abrirá su navegador web en la url  <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 
-<h2>2 - Métodos de la API</h2>
+<h2>- Métodos de la API</h2>
 
 <p>A continuación, se detallan los endpoints de la API con los que se puede interactuar:</p>
 
