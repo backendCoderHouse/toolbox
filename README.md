@@ -31,7 +31,7 @@
 <code>cd toolbox</code>
 <li>Ejecutar el comando </li>
 
-<code>docker compose up</code>
+<code>docker compose up --build</code>
 <li>Esto inicia 3 contenedores :</li>
    <ul>
    <li>expressapp (Servidor de Backend Node. JS)</li>
