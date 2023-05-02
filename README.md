@@ -30,7 +30,6 @@
 <li>Dirigirse a la carpeta raíz del proyecto con el comando </li>
 <code>cd toolbox</code>
 <li>Ejecutar el comando </li>
-<code>docker compose build</code>
 
 <code>docker compose up</code>
 <li>Esto inicia 3 contenedores :</li>
