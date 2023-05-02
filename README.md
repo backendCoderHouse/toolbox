@@ -1,5 +1,5 @@
 ﻿# Technical Choice Fullstack Toolbox 
-# Cristian Ríos 
+ Cristian Ríos 
 
 Este proyecto consiste en una aplicación web fullstack desarrollada con Node Js y React, la cual consume una API externa para mostrar datos de archivos con formato .CSV. 
 
