@@ -79,7 +79,7 @@
 
 (Los ejemplos a continuación consideran la API corriendo en Docker, de lo contrario se debe agregar el puerto 8080 = http://localhost:8080/api/files/... )
 
-<p> Nota : puede interactuar con la API desplegada en internet, mediante la siguiente url: https://toolboxapi-production.up.railway.app/api/files/<endpoint a probar> </p>
+<p> Nota : puede interactuar con la API desplegada en internet, mediante la siguiente url: https://toolboxapi-production.up.railway.app/api/files/[endpoint a probar] </p>
 
 Método GET 'http://localhost/api/files/list' Devuelve la lista de los archivos disponibles,
 
