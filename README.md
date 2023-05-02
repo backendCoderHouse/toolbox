@@ -125,7 +125,7 @@ Ejemplo de respuesta :
 
 Para correr el test de la API, se debe correr el comando npm run test, con el backend corriendo y desde la terminal en el directorio 'server'.
 
-Los endpoints testeados son  GET /api/files/data ,  GET /api/files/list y el filtrado por query param  GET /api/files?filename=   
+Los endpoints testeados son  GET /api/files/data ,  GET /api/files/list y el filtrado por query param  GET /api/files/data?filename=   
 
 # Capturas de pantalla de la aplicación
 
