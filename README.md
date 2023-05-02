@@ -1,72 +1,76 @@
-﻿# Technical Choice Fullstack Toolbox 
-## Cristian Ríos 
+# Technical Choice Fullstack Toolbox 
+# Cristian Ríos 
 
-Este proyecto consiste en una aplicación web fullstack desarrollada con Node Js y React, la cual consume una API externa para mostrar datos de archivos con formato .CSV. 
+<p>Este proyecto consiste en una aplicación web fullstack desarrollada con Node Js y React, la cual consume una API externa para mostrar datos de archivos con formato .CSV.</p>
 
-Estos archivos son filtrados según los requisitos solicitados en el desafío,  y luego disponibilizados para su descarga en el frontend de la app.
+<p>Estos archivos son filtrados según los requisitos solicitados en el desafío,  y luego disponibilizados para su descarga en el frontend de la app.</p>
 
 
 ## Desplegar la aplicación
 
-Para ejecutar esta aplicación, puede optar por utilizar Docker o correrlo directamente en su equipo.
+<p>Para ejecutar esta aplicación, puede optar por utilizar Docker o correrlo directamente en su equipo.</p>
 
-## 1 - Método Docker
+<h2>1 - Método Docker</h2>
 
-Requisitos técnicos :
-- Contar con GIT instalado (https://git-scm.com/downloads)
-- Contar con Docker instalado  (https://www.docker.com/)
-- Iniciar Docker
+<p>Requisitos técnicos :</p>
 
-Procedimiento:
+<ul>
+<li>Contar con GIT instalado (https://git-scm.com/downloads)</li>
+<li>Contar con Docker instalado  (https://www.docker.com/)</li>
+<li>Iniciar Docker</li>
+</ul>
 
-- En una terminal, Clonar el repositorio mediante el comando 
-### `git clone https://github.com/backendCoderHouse/toolbox`
+<p>Procedimiento:</p>
 
-- Dirigirse a la carpeta raíz del proyecto con el comando 
-### `cd toolbox`
+<ol>
+<li>En una terminal, Clonar el repositorio mediante el comando </li>
+<code>git clone https://github.com/backendCoderHouse/toolbox</code>
+<li>Dirigirse a la carpeta raíz del proyecto con el comando </li>
+<code>cd toolbox</code>
+<li>Ejecutar el comando </li>
+<code>docker compose build</code>
+<li>Una vez generados los contenedores, correr el comando </li>
+<code>docker compose up</code>
+<li>Esto inicia 3 contenedores :</li>
+   <ul>
+   <li>expressapp (Servidor de Backend Node. JS)</li>
+   <li>reactapp   (Aplicación del lado del cliente)</li>
+   <li>nginx (utilizado como proxy reverso )</li>
+   </ul>
+<li>Abrir el navegador web de su preferencia, y escribir en la barra de navegación la palabra 'localhost'</li>
+</ol>
 
-- Ejecutar el comando 
+<p>Se deberá visualizar la aplicación de react. Para consultar los métodos de la API de Node Js, diríjase a este documento, en la sección API.</p>
 
-### `docker compose up`
+<p>Para detener los contenedores, utilize la combinación de teclas CTRL+C en windows y Linux , Command+. en MAC OS.  </p>
 
-- Esto inicia 3 contenedores :
+<h2>2 - Método con comandos de NPM</h2>
 
-   * expressapp (Servidor de Backend Node. JS)
-   * reactapp   (Aplicación del lado del cliente)
-   * nginx (utilizado como proxy reverso )
+<p>Requisitos técnicos :</p>
 
-- Abrir el navegador web de su preferencia, y escribir en la barra de navegación la palabra   
-  
-  localhost
+<ul>
+<li>Contar con GIT instalado (https://git-scm.com/downloads)</li>
+<li>Contar con Node js instalado  (https://nodejs.org/es)</li>
+</ul>
 
-Se deberá visualizar la aplicación de react. Para consultar los métodos de la API de Node Js, diríjase a este documento, en la sección API.
+<p>Procedimiento:</p>
 
-Para detener los contenedores, utilize la combinación de teclas CTRL+C en windows y Linux , Command+. en MAC OS.  
+<ol>
+<li>En una terminal, Clonar el repositorio mediante el comando </li>
+<code>git clone https://github.com/backendCoderHouse/toolbox</code>
+<li>Para iniciar el servidor de la API , dirigirse a la carpeta 'server' del proyecto y correr el comando  </li>
+<code>npm start</code>
+<li>Para correr la aplicación de React, mediante la terminal , dirigirse al directorio 'client' del repositorio y correr el comando  </li>
+<code>npm start</code>
+</ol>
 
-## 2 - Método con comandos de NPM
+<p>Esto abrirá su navegador web en la url  <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 
-Requisitos técnicos :
-- Contar con GIT instalado (https://git-scm.com/downloads)
-- Contar con Node js instalado  (https://nodejs.org/es)
+<h2>2 - Métodos de la API</h2>
 
-Procedimiento:
-
-- En una terminal, Clonar el repositorio mediante el comando 
-### `git clone https://github.com/backendCoderHouse/toolbox`
-
-- Para iniciar el servidor de la API , dirigirse a la carpeta 'server' del proyecto y correr el comando  
-### `npm start`
-
-- Para correr la aplicación de React, mediante la terminal , dirigirse al directorio 'client' del repositorio y correr el comando  
-
-### `npm start`
+<p>A continuación, se detallan los endpoints de la API con los que se puede interactuar:</p>
 
 
-Esto abrirá su navegador web en la url  [http://localhost:3000](http://localhost:3000) .
-
-## 2 - Métodos de la API
-
-A continuación, se detallan los endpoints de la API con los que se puede interactuar:
 
 (Los ejemplos a continuación consideran la API corriendo en Docker, de lo contrario se debe agregar el puerto 8080 = http://localhost:8080/api/files/... )
 
