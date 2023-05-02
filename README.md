@@ -31,7 +31,7 @@
 <code>cd toolbox</code>
 <li>Ejecutar el comando </li>
 <code>docker compose build</code>
-<li>Una vez generados los contenedores, correr el comando </li>
+
 <code>docker compose up</code>
 <li>Esto inicia 3 contenedores :</li>
    <ul>
