@@ -58,12 +58,15 @@
 <ol>
 <li>En una terminal, Clonar el repositorio mediante el comando </li>
 <code>git clone https://github.com/backendCoderHouse/toolbox</code>
-<li>Para iniciar el servidor de la API , dirigirse a la carpeta 'server' del proyecto y correr el comando  </li>
+<li>Para iniciar el servidor de la API , dirigirse a la carpeta 'server' del proyecto y correr los comandos  </li>
+<code>npm install</code>
 <code>npm start</code>
-<li>Para correr la aplicación de React, mediante la terminal , dirigirse al directorio 'client' del repositorio y correr el comando  </li>
+<p>Nota : deberá contar con la versión 14 de Node js, dado que es uno de los requerimientos del challenge, que funcione bajo una versión específica de Node</p>
+<li>Para correr la aplicación de React, mediante la terminal , dirigirse al directorio 'client' del repositorio y correr los comandos  </li>
+<code>npm install</code>
 <code>npm start</code>
 </ol>
-
+<p>Nota : deberá contar con la versión 16 de Node js, dado que es uno de los requerimientos del challenge, que funcione bajo una versión específica de Node</p>
 <p>Esto abrirá su navegador web en la url  <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 
 <h2>2 - Métodos de la API</h2>
