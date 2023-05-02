@@ -128,6 +128,6 @@ Los endpoints testeados son  GET /api/files/data ,  GET /api/files/list y el fil
 
 ![Toolbox ‐ Hecho con Clipchamp](https://user-images.githubusercontent.com/70445507/235571127-5f586106-4d85-469d-8312-61a524dc10e2.gif)
 
-# Gracias por tomarse el tiempo de revisar el challenge !
+
 
 
