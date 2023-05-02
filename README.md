@@ -27,10 +27,6 @@ Procedimiento:
 
 - Ejecutar el comando 
 
-### `docker compose build`
-
-- Una vez generados los contenedores, correr el comando
-
 ### `docker compose up`
 
 - Esto inicia 3 contenedores :
