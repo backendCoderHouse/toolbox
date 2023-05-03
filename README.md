@@ -122,6 +122,7 @@ Ejemplo de respuesta :
   },
 ]
 
+Método GET 'http://localhost/api/files/data?filename=(nombre de archivo)' a través del filtrado por query pars, devuelve la información del archivo solicitado.
 
 ## Testing de endpoints 
 
